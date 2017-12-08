@@ -1,16 +1,4 @@
-
-class Auto{
-public:
-    Auto(int tankgroesse, float tankinhalt, float verbrauch);
-    void info()const;
-    void fahren(int km);
-    void tanken(float liter);
-
-private:
-    int   m_tankgroesse;
-    float m_tankinhalt;
-    float m_verbrauch;
-};
+#include "auto.h"
 
 Auto::Auto(int tankgroesse, float tankinhalt, float verbrauch)
 {
@@ -25,4 +13,10 @@ void Auto::info()const{
     std::cout << "Aktuell sind noch " << m_tankinhalt << " Liter im Tank.\n";
     std::cout << "Der Wagen verbraucht " << m_verbrauch << " Liter pro 100 km.\n";
     std::cout << std::endl;
+}
+
+void Auto::fahren(int km){
+
+    m_tankinhalt = m_tankinhalt - (m_verbrauch / 100)* km;
+
 }
