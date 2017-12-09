@@ -20,3 +20,10 @@ void Auto::fahren(int km){
     m_tankinhalt = m_tankinhalt - (m_verbrauch / 100)* km;
 
 }
+
+void Auto::tanken(float liter){
+
+   m_tankinhalt = m_tankinhalt + liter
+   if m_tankinhalt > m_tankgroesse
+           then m_tankinhalt = m_tankgroesse
+}
