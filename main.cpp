@@ -19,10 +19,6 @@ int main(int argc, char **argv)
  button.setFont(font);
  button.show();
 
- Auto wagen(80, 60.0f, 5.7f);
- wagen.fahren(100);
- wagen.info();
-
 
 
  return app.exec();
