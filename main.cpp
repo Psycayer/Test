@@ -20,9 +20,10 @@ int main(int argc, char **argv)
  button.show();
 
  Auto wagen(80, 60.0f, 5.7f);
- wagen.fahren(100);
+ wagen.fahren(543);
  wagen.info();
-
+ wagen.tanken(65);
+ wagen.info();
 
 
  return app.exec();

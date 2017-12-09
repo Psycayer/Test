@@ -23,7 +23,9 @@ void Auto::fahren(int km){
 
 void Auto::tanken(float liter){
 
-   m_tankinhalt = m_tankinhalt + liter
-   if m_tankinhalt > m_tankgroesse
-           then m_tankinhalt = m_tankgroesse
+   m_tankinhalt = m_tankinhalt + liter;
+   if(m_tankinhalt > m_tankgroesse){
+       m_tankinhalt = m_tankgroesse;
+       std::cout << "Ups! War vielleicht doch ein bisschen zu viel" << std::endl;
+   }
 }
