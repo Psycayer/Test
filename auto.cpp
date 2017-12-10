@@ -5,14 +5,18 @@ Auto::Auto(int tankgroesse, float tankinhalt, float verbrauch)
     m_tankgroesse = tankgroesse;
     m_tankinhalt  = tankinhalt;
     m_verbrauch   = verbrauch;
+    m_overflow = false;
 }
 
 void Auto::info()const{
 
+    if (m_overflow == true){
+        std::cout << "Ups! War vielleicht doch ein bisschen zu viel" << std::endl;
+    }
     std::cout << "In den Tank passen " << m_tankgroesse << " Liter Treibstoff.\n";
     std::cout << "Aktuell sind noch " << m_tankinhalt << " Liter im Tank.\n";
     std::cout << "Der Wagen verbraucht " << m_verbrauch << " Liter pro 100 km.\n";
-    std::cout << std::endl;
+    std::cout << std::endl;       
 }
 
 void Auto::fahren(int km){
@@ -26,6 +30,8 @@ void Auto::tanken(float liter){
    m_tankinhalt = m_tankinhalt + liter;
    if(m_tankinhalt > m_tankgroesse){
        m_tankinhalt = m_tankgroesse;
-       std::cout << "Ups! War vielleicht doch ein bisschen zu viel" << std::endl;
+
    }
 }
+
+

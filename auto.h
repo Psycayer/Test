@@ -14,5 +14,6 @@ private:
     int   m_tankgroesse;
     float m_tankinhalt;
     float m_verbrauch;
+    bool m_overflow;
 };
 #endif // AUTO_H
