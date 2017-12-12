@@ -5,16 +5,16 @@ int main(int argc, char **argv)
 {
     QApplication app (argc, argv);
 
-    QWidget window;
-    window.setFixedSize(1000, 500);
 
-    QPushButton *button = new QPushButton("Hello World", &window);
-    button->setGeometry(100, 100, 100, 100);
-
-    window.show();
     return app.exec();
 }
 
+
+// QWidget window;
+//window.setFixedSize(1000, 500);
+//QPushButton *button = new QPushButton("Hello World", &window);
+//button->setGeometry(100, 100, 100, 100);
+//window.show();                                    Fenster
 
 //QPushButton button1 ("test");
 //QPushButton button2 ("other", &button1);
