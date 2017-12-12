@@ -10,4 +10,5 @@ Window::Window(QWidget *parent) : QWidget(parent)
     m_button = new QPushButton("Hello World", this);
     m_button->setGeometry(10, 10, 80, 30);
 
+    connect(m_button, SIGNAL (clicked()), this, SLOT (close()));
 }

@@ -20,7 +20,6 @@ int main(int argc, char **argv)
  button.show();
 */
 
-
  Window window;
  window.show();
 
