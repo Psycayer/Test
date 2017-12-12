@@ -1,0 +1,2 @@
+# should ignore all QT pro.user files 
+*.user
