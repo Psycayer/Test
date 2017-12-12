@@ -2,7 +2,7 @@
 #include <QPushButton>
 #include <QFont>
 #include <QString>
-#include <auto.h>
+#include <window.h>
 
 int main(int argc, char **argv)
 {
@@ -10,7 +10,7 @@ int main(int argc, char **argv)
 
  //QFont(const QString & family, int pointSize = –1, int weight = -1, bool italic = false);
 
-
+/*
  QFont font ("Courier");
 
  QPushButton button;
@@ -18,8 +18,11 @@ int main(int argc, char **argv)
  button.setToolTip("A tooltip");
  button.setFont(font);
  button.show();
+*/
 
 
+ Window window;
+ window.show();
 
  return app.exec();
 }
