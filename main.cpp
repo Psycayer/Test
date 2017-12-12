@@ -5,15 +5,20 @@ int main(int argc, char **argv)
 {
     QApplication app (argc, argv);
 
-    QPushButton button1 ("test");
-    QPushButton button2 ("other", &button1);
-    QPushButton button3 ("type", &button2);
+    QWidget window;
+    window.setFixedSize(1000, 500);
 
-    button1.show();
+    QPushButton *button = new QPushButton("Hello World", &window);
+    button->setGeometry(100, 100, 100, 100);
 
+    window.show();
     return app.exec();
 }
 
+
+//QPushButton button1 ("test");
+//QPushButton button2 ("other", &button1);
+//button1.show();                                   Buttonception
 
 //QPushButton button;
 //button.setText("Whoop whoop 'n Knöpges!");
