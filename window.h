@@ -12,10 +12,13 @@ public:
     explicit Window(QWidget *parent = 0);
 private:
     QPushButton *m_button;
-
+    int m_counter;
 signals:
-
+    void counterReached();
 public slots:
+
+private slots:
+    void slotButtonClicked(bool checked);
 };
 
 #endif // WINDOW_H
