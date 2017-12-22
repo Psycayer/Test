@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QApplication>
 #include <QRadioButton>
+#include <QBoxLayout>
 
 class Window : public QWidget
 {
@@ -21,7 +22,12 @@ private slots:
 
 private:
  int m_counter;
- QRadioButton *m_radiobutton;
+ QRadioButton *m_radiobutton1;
+ QRadioButton *m_radiobutton2;
+ QRadioButton *m_radiobutton3;
+ QRadioButton *m_radiobutton4;
+ QRadioButton *m_radiobutton5;
+ QBoxLayout *m_boxlayout;
  QPushButton *m_button;
 };
 
