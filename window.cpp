@@ -3,7 +3,7 @@
 Window::Window(QWidget *parent) : QWidget(parent)
 {
 
-    setFixedSize(100, 50);
+    setFixedSize(200, 100);
 
     m_button = new QPushButton("Hello World", this);
     m_button->setGeometry(10, 10, 80, 30);
@@ -13,6 +13,9 @@ Window::Window(QWidget *parent) : QWidget(parent)
 
     connect(m_button, SIGNAL (clicked(bool)), this, SLOT (slotButtonClicked(bool)));
      connect(this, SIGNAL (counterReached()), QApplication::instance(), SLOT (quit()));
+
+    m_radiobutton = new QRadioButton("'n ganz korrekter Radiobutton", this );
+    m_radiobutton->setGeometry(10, 50, 200, 30);
 }
 
 
