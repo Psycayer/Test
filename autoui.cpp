@@ -2,7 +2,7 @@
 #include "ui_autoui.h"
 
 AutoUI::AutoUI(QWidget *parent) :
-    QWidget(parent),
+    QMainWindow(parent),
     ui(new Ui::AutoUI)
 {
     ui->setupUi(this);

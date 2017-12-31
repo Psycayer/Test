@@ -1,13 +1,13 @@
 #ifndef AUTOUI_H
 #define AUTOUI_H
 
-#include <QWidget>
+#include <QMainWindow>
 
 namespace Ui {
 class AutoUI;
 }
 
-class AutoUI : public QWidget
+class AutoUI : public QMainWindow
 {
     Q_OBJECT
 
