@@ -24,18 +24,25 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>30</x>
       <y>30</y>
       <width>741</width>
-      <height>61</height>
+      <height>71</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Füllstand:</string>
        </property>
@@ -43,16 +50,34 @@
      </item>
      <item row="1" column="0">
       <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Kilometerstand:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QLCDNumber" name="lcdNumber"/>
+      <widget class="QLCDNumber" name="lcdNumber">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item row="0" column="1">
       <widget class="QProgressBar" name="progressBar">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="value">
         <number>24</number>
        </property>
@@ -60,7 +85,7 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -131,6 +156,9 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="toolTip">
         <string extracomment="brum brum"/>
        </property>
@@ -154,8 +182,11 @@
          <bold>true</bold>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="toolTip">
-        <string extracomment="glug glug glug"/>
+        <string notr="true" extracomment="glug glug glug"/>
        </property>
        <property name="text">
         <string>Tanken</string>
