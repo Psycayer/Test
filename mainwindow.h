@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QString>
 #include <QMainWindow>
+#include <QPushButton>
 
 namespace Ui {
 class MainWindow;

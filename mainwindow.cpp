@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QString>
+
 
 double FirstNumber;
 bool UserIsTypingSecondNumber = false;
@@ -12,6 +12,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+    ui->PBNum0->setText("0");
+    ui->PBNum1->setText("1");
+    ui->PBNum2->setText("2");
+    ui->PBNum3->setText("3");
 
     connect(ui->PBNum0,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->PBNum1,SIGNAL(released()),this,SLOT(digit_pressed()));
@@ -70,6 +76,15 @@ void MainWindow::digit_pressed()
     {
         newLabel.remove(0,1);
     }
+
+    // this loop is only needed for character issues under Linux and remove not needed characters "&"!
+    int i = 0;
+    do{
+        if (newLabel.at( i ) == '&'){
+           newLabel.remove(i,1);
+        }
+        i++;
+    }while(i < newLabel.length());
 
     ui->LBSum->setText(newLabel);
 }

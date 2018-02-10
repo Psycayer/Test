@@ -345,7 +345,7 @@ QPushButton:pressed {
 }</string>
          </property>
          <property name="text">
-          <string>6</string>
+          <string notr="true">6</string>
          </property>
         </widget>
        </item>
