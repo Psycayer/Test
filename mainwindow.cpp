@@ -13,12 +13,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
-    ui->PBNum0->setText("0");
-    ui->PBNum1->setText("1");
-    ui->PBNum2->setText("2");
-    ui->PBNum3->setText("3");
-
     connect(ui->PBNum0,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->PBNum1,SIGNAL(released()),this,SLOT(digit_pressed()));
     connect(ui->PBNum2,SIGNAL(released()),this,SLOT(digit_pressed()));
@@ -72,9 +66,12 @@ void MainWindow::digit_pressed()
 
     newLabel = LabelNumber;
 
-    if( newLabel.at( 0 ) == '0')
+    if (!LabelNumber.contains("."))
     {
-        newLabel.remove(0,1);
+        if( newLabel.at( 0 ) == '0')
+        {
+            newLabel.remove(0,1);
+        }
     }
 
     // this loop is only needed for character issues under Linux and remove not needed characters "&"!
@@ -135,12 +132,7 @@ void MainWindow::on_PBPoint_released()
     QString LabelNumber;
 
     LabelNumber = ui->LBSum->text();
-    if (LabelNumber.contains("."))
-    {
-         ui->LBSum->setText(ui->LBSum->text()+"");
-    }
-
-    else
+    if (!LabelNumber.contains("."))
     {
         ui->LBSum->setText(ui->LBSum->text()+".");
     }
